@@ -4379,7 +4379,7 @@ void SetSaturnResolution(int width, int height)
         if (_Ygl->rotate_screen) {
           if (_Ygl->isFullScreen) {
             if (  (GlHeight * hrate) > GlWidth) {
-              _Ygl->originy = (GlHeight - GlWidth  * wrate);
+              _Ygl->originy = (GlHeight - GlWidth  * wrate) / 2.0f;
               GlHeight = _Ygl->screen_width * wrate;
             }
             else {
@@ -4395,7 +4395,7 @@ void SetSaturnResolution(int width, int height)
         else {
           if (_Ygl->isFullScreen) {
             if (  (GlHeight * wrate) > GlWidth) {
-              _Ygl->originy = (GlHeight - GlWidth  * hrate);
+              _Ygl->originy = (GlHeight - GlWidth  * hrate) / 2.0f;
               GlHeight = _Ygl->screen_width * hrate;
             }
             else {
